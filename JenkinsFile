@@ -12,7 +12,9 @@ agent any
         }
         stage('Test') { 
             steps {
+			dir ('ZLTest') {
                 sh 'mvn test' 
+				}
             }
         }
     }

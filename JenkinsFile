@@ -5,6 +5,7 @@ agent any
     stages {
         stage('Build') {
             steps {
+			dir: ZLTest
                 sh 'mvn clean'
             }
         }

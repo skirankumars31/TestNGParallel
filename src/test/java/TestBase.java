@@ -17,8 +17,8 @@ public class TestBase {
     protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
     @BeforeMethod
-    @Parameters(value={"browser"})
-    public void setupTest (String browser) throws MalformedURLException {
+    @Parameters(value={"browser","testname"})
+    public void setupTest (String browser, String testname) throws MalformedURLException {
         //Set DesiredCapabilities
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -36,6 +36,7 @@ public class TestBase {
 
         //Set BrowserName
         capabilities.setCapability("browserName", browser);
+        capabilities.setCapability("name", testname);
 
         //Set Browser to ThreadLocalMap
         driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities));

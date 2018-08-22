@@ -10,6 +10,7 @@ public class SecondTest extends TestBase{
     public void GOOGLE4() throws Exception {
         System.out.println("Google4 Test Started! " + Thread.currentThread().getId());
         getDriver().navigate().to("http://www.google.com");
+        Thread.sleep(6000);
         System.out.println("Google4 Test's Page title is: " + getDriver().getTitle() +" "+ Thread.currentThread().getId());
         Assert.assertEquals(getDriver().getTitle(), "Google");
         System.out.println("Google4 Test Ended! " + Thread.currentThread().getId());
@@ -19,6 +20,7 @@ public class SecondTest extends TestBase{
     public void YANDEX() throws Exception {
         System.out.println("Yandex Test Started! " + Thread.currentThread().getId());
         getDriver().navigate().to("http://www.yandex.com");
+        Thread.sleep(6000);
         System.out.println("Yandex Test's Page title is: " + getDriver().getTitle() +" "+ Thread.currentThread().getId());
         Assert.assertEquals(getDriver().getTitle(), "Yandex");
         System.out.println("Yandex Test Ended! " + Thread.currentThread().getId());

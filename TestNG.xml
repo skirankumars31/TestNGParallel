@@ -15,4 +15,11 @@
             <class name="SecondTest"/>
         </classes>
     </test> <!-- Second Test -->
+    <test name="ThirdTest" parallel="true">
+        <parameter name="browser" value="opera"/>
+        <parameter name="testname" value="ThirdTest_Firefox"/>
+        <classes>
+            <class name="ThirdTest"/>
+        </classes>
+    </test>
 </suite> <!-- Suite -->

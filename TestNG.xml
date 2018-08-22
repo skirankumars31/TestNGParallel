@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Suite">
-    <test name="FirstTest">
+<suite thread-count="3" name="Suite" parallel="true">
+    <test name="FirstTest" parallel="true">
         <parameter name="browser" value="chrome"/>
         <parameter name="testname" value="FirstTest_Chrome"/>
         <classes>
             <class name="FirstTest"/>
         </classes>
     </test> <!-- First Test -->
-    <test name="SecondTest">
+    <test name="SecondTest" parallel="true">
         <parameter name="browser" value="firefox"/>
         <parameter name="testname" value="SecondTest_Firefox"/>
         <classes>

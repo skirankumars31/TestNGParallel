@@ -16,7 +16,7 @@
         </classes>
     </test> <!-- Second Test -->
     <test name="ThirdTest" parallel="true">
-        <parameter name="browser" value="opera"/>
+        <parameter name="browser" value="firefox"/>
         <parameter name="testname" value="ThirdTest_Firefox"/>
         <classes>
             <class name="ThirdTest"/>
